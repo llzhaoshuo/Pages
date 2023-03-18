@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!--[if lte IE 8]> <html class="oldie" lang="en"> <![endif]-->
+<!--[if IE 9]> <html class="ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="format-detection" content="telephone=no">
+	<script type="text/javascript" src="title.js"></script>
+	<link rel="stylesheet" href="../../js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="../../css/all.css" />
+	<link rel="stylesheet" href="../../css/screen.css" />
+	<link rel="shortcut icon" href="../../images/logo1.png"  type="image/x-icon" /> 
+	<link rel="icon" href="../../images/logo1.png" type="image/x-icon" />
+</head>
+<body>
+	<div id="wrapper">
+		<div class="wrapper-header" style="float">
+			<header id="header">
+				<script type="text/javascript" src="../header.js"></script>
+			</header>
+		</div>
+		<div style="border:1px solid #696969"></div> 
+		<div class="project-body">
+		<ul>
+		</br>
+		
+		<h3><font size='6px' color='#696969' align='center'><p>Segmentation of Pericardial Adipose Tissue in CMR Images: a Benchmark Dataset MRPEAT and a Triple-Stage Network 3SUnet</p></font></h3>
+		<br>	
+		<div class="index-wrapper" >
+			<div class="index-body" >
+				
+				<font color='black'><b>Background</b><br>
+				<p>
+				The increased pericardial adipose tissue (PEAT) is associated with a series of cardiovascular diseases (CVDs) and metabolic syndromes. Therefore, particular emphasis should be placed on PEAT quantification and its role in CVD development and progression. In addition, given the more promising clinical value of quantifying PEAT in cardiovascular magnetic resonance (CMR) images than computed tomography (CT) images in CVD assessment, an accurate and time-saving PEAT measurement based on CMR is indispensable.
+				</p>
+				<br>
+				
+				<b>Motivation</b><br>
+				<p>
+				However, almost all existing studies are based on computed tomography (CT) diagnostic modality. Although there is a study segmenting EAT in CMR images in the standard four-chamber(4CH) view, this dataset is unavailable and cardiac short axis (SA) MR images are more prevalent in CVD diagnosis. Segmentation of PEAT in cardiac SA MR images still an pending problem due to the following challenges, 1) the absence of public CMR datasets, 2) diversity in shape, size and location of PEAT, 3) severe class imbalance , and 4) heavily overlapping in intensity. 
+				<br><br>
+				</p></font>
+				
+				<font color="F65353"><b>Our Contributions</b></font><br>
+				<font color='black'><p>
+				To address the above challenges, we release a benchmark dataset and propose a deep learning model to segment PEAT in cardiac SA MR images. The main contributions of our paper are given as follows.
+				<li>A cardiac SA MR image dataset is released with PEAT being labelled by a radiologist and checked by another and a multiple-stage deep learning model is proposed to segment PEAT in the dataset.</li>
+				<img src="research1_fig/csz1.png" alt="reid pic" style="width:800px;height:248px;" title="reid" ;="" algin="middle">	
+				<li>Ventricle segmentation and location are adopted as two additional tasks to assist the model in locating PEAT by ensuring surroundings meet with clinical anatomy.</li>
+				<li>Continual learning is used to transfer knowledge from existing datasets with cardiac ventricle labels to release additional requirements on labelling our dataset.</li>
+				<li>A prior guidance strategy is proposed to refine PEAT segmentation results by retrieving knowledge from ground truth labels and image contents.</li>
+				<img src="research1_fig/csz2.png" alt="reid pic" style="width:800px;height:590px;" title="reid" ;="" algin="middle">
+				<li>The segmentation model is qualitatively and quantitatively compared with state-of-the-art models on the dataset we released.</li>
+				<img src="research1_fig/csz3.png" alt="reid pic" style="width:800px;height:200px;" title="reid" ;="" algin="middle">
+				<br><br>More informations are referred in our<a href="" target="_blank"> paper</a>!
+				
+				<br><br><br>
+				<b>Sources</b><br><br>
+				Now!
+				<br>Dataset can be downloaded in Our <a href="" target="_blank"> Dataset_site</a>!
+				<br>Codes can be downloaded in Our <a href="" target="_blank"> Github</a>!
+				
+				
+				</p></font>
+				<br><br>
+				
+				
+				
+			</div>		
+		</div>
+	
+		</ul>
+		</div>
+		
+		<footer id="footer">
+			<div style="border:1px solid #696969"></div> 
+			<script type="text/javascript" src="../../footer.js"></script>
+		</footer>
+	</div>
+	
+	
+	<script src="../../js/jquery-1.11.1.min.js"></script>
+	<script src="../../js/isotope.pkgd.min.js"></script>
+	<script src="../../js/cells-by-row.js"></script>
+	<script type="text/javascript" src="../../js/fancybox/jquery.fancybox.pack.js"></script>
+	<script type="text/javascript" src="../../js/main.js"></script>
+</body>
+</html>

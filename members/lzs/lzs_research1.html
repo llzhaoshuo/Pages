@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!--[if lte IE 8]> <html class="oldie" lang="en"> <![endif]-->
+<!--[if IE 9]> <html class="ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="format-detection" content="telephone=no">
+	<script type="text/javascript" src="../../title.js"></script>
+	<link rel="stylesheet" href="../../js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="../../css/all.css" />
+	<link rel="stylesheet" href="../../css/screen.css" />
+	<link rel="shortcut icon" href="../../images/logo1.png"  type="image/x-icon" /> 
+	<link rel="icon" href="../../images/logo1.png" type="image/x-icon" />
+</head>
+<body>
+	<div id="wrapper">
+		<div class="wrapper-header" style="float">
+			<header id="header">
+				<script type="text/javascript" src="../header.js"></script>
+			</header>
+		</div>
+		<div style="border:1px solid #696969"></div> 
+		<div class="project-body">
+		<ul>
+		</br>
+		
+		<h3><font size='6px' color='#696969' align='center'><p>Knowledge-Preserving continual person re-identification using Graph Attention Network</p></font></h3>
+		<br>	
+		<div class="index-wrapper" >
+			<div class="index-body" >
+				
+				<font color='black'><b>Background</b><br>
+				<p>
+				Person re-identification aims to retrieve a given person (query) from a large number of candidate images (gallery). Existing deep learning-based methods usually train the model on a fixed scenario (domain). During inference, features of the query and gallery are extracted by the trained model. The similarity between query and gallery features is then measured by Euclidean or cosine distance to match the query from the gallery.
+				</p>
+				<br>
+				
+				<b>Motivation</b><br>
+				<p>
+				However, as the application scenario changes, which is actually the common case, the models will not perform well if it is deployed directly on these changed domains which are also called new domains. A straight-forward solution is fine-tuning the models following the schematic diagram given in Fig. 1(a). But fine-tuning on images from additional domains leads to catastrophic forgetting, namely the models will perform badly on original domains. Joint training is effective to battle against this problem, but it has to be ensured that images from all the domains are accessible at the same time as shown in Fig. 1(b), which is unrealistic in most scenarios. Continual learning aims to gradually learn a model as the image domain changes as in Fig. 1(c). The effectiveness of the model in original domains is well maintained without accessing original images. Nevertheless, the continual learning paradigm still needs to meet the challenge of catastrophic forgetting of learned knowledge on original domains.
+				</p><br>
+				<img src="research1_fig/setup.png" alt="reid pic" style="width:810px;height:260px;" title="reid" ;="" algin="center">
+				<br><br>
+				</font>
+				
+				<font color="F65353"><b>Our Contributions</b></font><br>
+				<font color='black'><p>
+				To address the above challenges, we propose a Continual person re-identification model via a Knowledge-Preserving (CKP) mechanism. Our contributions are summarized as follows:
+				<li>A fully connected graph is constructed to preserve knowledge extracted from continual learning process and used to guide training.</li>
+				<li>A temporary graph, which is also fully connected, is constructed by features extracted from any given training batch.</li>
+				<li>The most related knowledge is propagated from the temporary graph to the knowledge preserving graph via a Graph Attention Network (GAT).</li>
+				</p>
+				<img src="research1_fig/framework.png" alt="reid pic" style="width:800px;height:500px;" title="reid" ;="" algin="middle">
+				<br><br>
+				
+				<b>Experiments</b>
+				<p>
+				We have conducted experiments on 12 benchmark datasets of person re-identification (Market1501, DukeMTMC, CUHK03, CUHK-SYSU, MSMT17, GRID, SenseReID, CUHK01, CUHK02, VIPER, iLIDS, and PRID). Datasets are downloaded from <a href="https://kaiyangzhou.github.io/deep-person-reid/datasets.html" target="_blank">Torchreid_Dataset_Doc</a>  and <a href="https://github.com/BJTUJia/person_reID_DualNorm" target="_blank">DualNorm</a>. 
+				The comparative models include Fine-Tune (FT), Learning without Forgetting (LwF), Continual Representation Learning (CRL), <a href="https://github.com/TPCD/LifelongReID" target="_blank">Adaptive Knowledge Accumulation (AKA)</a>, Generalizing without Forgetting (GwF) and Joint Training (JT).
+				We adopt commonly used evaluation metrics, namely the Rank-1 index and the mean average precision (mAP) to evaluate the performance of our CKP.	
+				</p><br><br>
+				<img src="research1_fig/1.png" alt="reid pic" style="width:800px;height:200px;" title="reid" ;="" algin="middle">
+				<br>
+				<img src="research1_fig/2.png" alt="reid pic" style="width:800px;height:200px;" title="reid" ;="" algin="middle">
+				<br>			
+				
+				
+				<br>
+			
+				<b>Sources</b>			
+				<li>More detials please see <a href="https://www.sciencedirect.com/science/article/pii/S089360802300045X" target="_blank">our paper.</a></li>
+				<li>The code is available at <a href="https://github.com/llzhaoshuo/ContinualReID" target="_blank">ContinualReID</a>.</li>
+				
+				</font>
+				<br><br>
+				
+				
+				
+			</div>		
+		</div>
+	
+		</ul>
+		</div>
+		
+		<footer id="footer">
+			<div style="border:1px solid #696969"></div> 
+			<script type="text/javascript" src="../../footer.js"></script>
+		</footer>
+	</div>
+	
+	
+	<script src="../../js/jquery-1.11.1.min.js"></script>
+	<script src="../../js/isotope.pkgd.min.js"></script>
+	<script src="../../js/cells-by-row.js"></script>
+	<script type="text/javascript" src="../../js/fancybox/jquery.fancybox.pack.js"></script>
+	<script type="text/javascript" src="../../js/main.js"></script>
+</body>
+</html>
